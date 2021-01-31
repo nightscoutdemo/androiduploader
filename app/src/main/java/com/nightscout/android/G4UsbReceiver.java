@@ -19,7 +19,7 @@ public class G4UsbReceiver extends BroadcastReceiver {
         switch (intent.getAction()) {
             case UsbManager.ACTION_USB_DEVICE_DETACHED:
                 if (!isConnected(context)) {
-                    Log.d(TAG, "Stopping syncing on USB attached...");
+                    Log.d(TAG, "Stopping syncing on USB attached.....");
                     Intent syncIntent = new Intent(context, CollectorService.class);
 //                    syncIntent.putExtra(CollectorService.SYNC_TYPE, CollectorService.NON_SYNC);
                     context.stopService(syncIntent);
